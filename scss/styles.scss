@@ -153,6 +153,8 @@ header {
 
             margin-bottom: 20px;
 
+            user-select: none;
+
             &:hover {
                 opacity: 50%;
             }
