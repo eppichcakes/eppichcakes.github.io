@@ -2,6 +2,7 @@ const ANIMATION_DURATION = 1000;
 const SLIDE_COUNT = 5;
 const PREFIX = 'placeholder_1920x1080_';
 
+let active = false;
 let slide = 0;
 let element = null;
 let container = null;
@@ -37,6 +38,13 @@ function prev() {
 }
 
 function swap(direction = 1) {
+    if (active === true){
+        return;
+    } else {
+        active = true;
+        setTimeout(() => active = false, ANIMATION_DURATION);
+    }
+
     element.css('z-index', '-1');
 
     const clone = element.clone();
@@ -47,6 +55,9 @@ function swap(direction = 1) {
 
     clone.animate({
         left: clone.parent().width() / 2 - clone.width() / 2
+    }, ANIMATION_DURATION);
+    element.animate({
+        left: -direction * clone.parent().width()
     }, ANIMATION_DURATION);
 
     const _ = element;
