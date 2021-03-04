@@ -18,26 +18,26 @@ function init() {
 }
 
 function next() {
-    slide = slide + 1;
+    const _ = slide + 1;
 
-    if (slide >= SLIDE_COUNT) {
-        slide = 0;
+    if (_ >= SLIDE_COUNT) {
+        _ = 0;
     }
 
-    swap();
+    swap(_);
 }
 
 function prev() {
-    slide = slide - 1;
+    const _ = slide - 1;
 
-    if (slide < 0) {
-        slide = SLIDE_COUNT - 1;
+    if (_ < 0) {
+        _ = SLIDE_COUNT - 1;
     }
 
-    swap(-1);
+    swap(_, -1);
 }
 
-function swap(direction = 1) {
+function swap(newSlide, direction = 1) {
     if (active === true){
         return;
     } else {
