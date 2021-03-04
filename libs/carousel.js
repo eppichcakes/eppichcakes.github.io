@@ -42,6 +42,7 @@ function swap(newSlide, direction = 1) {
         return;
     } else {
         active = true;
+        slide = newSlide;
         setTimeout(() => active = false, ANIMATION_DURATION);
     }
 
