@@ -14,6 +14,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@100;300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="public/css/styles.css">
+        <script  src="/public/package/jquery/jquery-3.6.0.min.js"></script>
+        <script src="/libs/carousel.js" async defer></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -21,7 +23,7 @@
         <![endif]-->
         
         <div id="main">
-            <header>
+            <header class="section">
                 <img src="/public/assets/images/placeholder_300x150.svg" alt="eppich cakes logo" id="logo">
                 <h1>
                     Eppich Cakes
@@ -34,7 +36,25 @@
                 </ul>
             </header>
             <div class="margin__section"></div>
-            <div class="image__showcase column__3 padding__content">
+            <!-- Carousel -->
+            <div class="section full carousel__container">
+                <img class="full carousel__image" alt="carousel image" />
+                <div class="carousel__content">
+                    <h2 id="carousel__head"></h2>
+                    <h3 id="carousel__text"></h3>
+                </div>
+                <div class="full carousel__navigation">
+                    <div role="button" class="carousel__navigation__prev">
+                        <img src="/public/assets/images/long-arrow-left.svg" alt="carousel previous button" />
+                    </div>
+                    <div role="button" class="carousel__navigation__next">
+                        <img src="/public/assets/images/long-arrow-right.svg" alt="carousel next button" />
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel -->
+            <div class="margin__section"></div>
+            <div class="section image__showcase column__3 padding__content">
                 <div>
                     <a alt="navigation 1" src="#">
                         <img src="/public/assets/images/placeholder_300x300.svg" alt="navigation 1">
@@ -67,7 +87,7 @@
                 </div>
             </div>
             <div class="margin__section"></div>
-            <footer>
+            <footer class="section">
                 <div id="location">
                     <h4>
                         Dessert Pick Up
@@ -88,8 +108,5 @@
                 </div>
             </footer>
         </div>
-
-        <script src="/package/jquery/jquery-3.6.0.min.js" async defer></script>
-        <script src="/public/libs/index.js" async defer></script>
+        </html> 
     </body>
-</html>
