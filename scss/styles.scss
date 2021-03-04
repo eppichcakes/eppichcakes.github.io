@@ -1,0 +1,174 @@
+p, h1, h4 {
+    font-family: 'Raleway', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    line-height: 1.25;
+}
+
+h1 {
+    font-weight: 300;
+    letter-spacing: 5px;
+    line-height: 2;
+}
+
+h4 {
+    font-weight: 600;
+    letter-spacing: 1.33px;
+    line-height: 1.33;
+}
+
+a {
+    cursor: pointer;
+}
+
+#main {
+    margin: auto;
+    max-width: 800px;
+}
+
+/* Header Styling */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-bottom: 2px solid #cecece;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 35px;
+    
+        margin-bottom: 30px;
+    }
+
+    img {
+        height: 150px;
+        width: 300px;
+        margin: auto;
+    }
+
+    ul {
+        list-style: none;
+    
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr; 
+        gap: 2rem;
+
+        li {
+            text-align: left;
+        
+            cursor: pointer;
+
+            a {
+                position: relative;
+                &:hover {
+                    &:after {
+                        content: '';
+                        position: absolute;
+
+                        width: calc(100% + 4px);
+                        height: 2px;
+
+                        left: -2px;
+                        bottom: -5px;
+
+                        background: #333;
+
+                        transition-property: width;
+                        transition-delay: 1s;
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* Footer Styling */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-top: 2px solid #cecece;
+
+    padding: 15px 20px;
+
+    #location {
+        h4 {
+            font-size: 18px;
+        
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    }
+
+    #social__links {
+        display: flex;
+        gap: 1rem;
+    
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    #instagram {
+        width: 25px;
+        height: 25px;
+        transform: translateY(-2.5px)
+    }
+}
+
+/* Body */
+
+/* ID */
+
+#social__links .icon {
+    cursor: pointer;
+}
+
+/* Class */
+
+.margin__section {
+    margin: 40px;
+}
+
+.padding__content {
+    padding: 0 20px;
+}
+
+.image__showcase div {
+    padding-top: 100%;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+}
+
+.column__3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
