@@ -1,6 +1,6 @@
 function sendEmail(data) {
     const {
-        date,
+        dateString,
         description,
         email,
         guest,
@@ -35,7 +35,7 @@ function sendEmail(data) {
                 <tr><td>Email: ${email}</td></tr>
                 <tr><td>Phone: ${phone}</td></tr>
                 <tr></tr>
-                <tr><td>Requested Date: ${date}</td></tr>
+                <tr><td>Requested Date: ${dateString}</td></tr>
                 <tr><td>Approx. Guest: ${guest}</td></tr>
                 <tr></tr>
                 <tr><td>Description:</td></tr>
