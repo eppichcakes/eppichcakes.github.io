@@ -45,7 +45,7 @@ form {
 }
 
 #border {
-    max-width: 420px;
+    max-width: 600px;
 
     width: 100%;
     height: fit-content;
@@ -75,6 +75,10 @@ input, textarea {
     padding: 5px;
 
     box-shadow: inset 0 2px 5px #ff8d46;
+
+    letter-spacing: 2px;
+
+    font-size: 20px;
 }
 
 #footer {
@@ -153,15 +157,17 @@ textarea::placeholder {
     color: #fff;
     opacity: 1;
 
-    letter-spacing: 1.2px;
+    letter-spacing: 2px;
+
+    font-size: 20px;
 }
 
 #blurb {
     font-family: 'Roboto', sans-serif;
 
-    letter-spacing: 1.2px;
+    letter-spacing: 2px;
 
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 #brand {
@@ -172,7 +178,7 @@ textarea::placeholder {
     align-items: center;
     justify-content: center;
 
-    height: 120px;
+    height: 160px;
 }
 
 #backdrop {
@@ -182,8 +188,8 @@ textarea::placeholder {
     justify-content: center;
 
     background: #ff9551;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     border-radius: 50%;
     transform: translateY(-3px);
@@ -216,8 +222,8 @@ textarea::placeholder {
 
     border-radius: 50%;
 
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
 
     margin: 0 auto 10px;
 
@@ -231,41 +237,13 @@ textarea::placeholder {
 
     width: 3.8em;
 
-    font-size: 18px;
-}
-
-@media (max-width: 600px) {
-    #backdrop {
-        background: #ff690b;
-    }
-
-    #backdrop::before {
-        height: 145vh;
-
-        background-size: 250%;
-        
-        opacity: 0.2;
-    }
-
-    body {
-        padding: 5px;
-
-        background: #ff690b;
-    }
-
-    body::before {
-        height: 145vh;
-
-        background-size: 100%;
-        
-        opacity: 0.3;
-    }
+    font-size: 23px;
 }
 
 .fields {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .checkmark {
@@ -341,12 +319,73 @@ textarea::placeholder {
     100% {
       opacity: 1;
     }
+}
   
     
-    @keyframes text {
-    0% {
-      opacity: 0; }
-    100% {
-      opacity: 1;
-    }
+@keyframes text {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
+
+@media (max-width: 600px) {
+    .fields {
+        gap: 10px;
+    }
+
+    #backdrop {
+        background: #ff690b;
+    }
+
+    #backdrop::before {
+        height: 145vh;
+
+        background-size: 250%;
+        
+        opacity: 0.2;
+    }
+
+    #blurb {
+        letter-spacing: 1.2px;
+    
+        font-size: 0.8em;
+    }
+
+    body {
+        padding: 5px;
+
+        background: #ff690b;
+    }
+
+    h1, h2,
+    input::placeholder, 
+    textarea::placeholder {
+        letter-spacing: 1.2px;
+    
+        font-size: 16px;
+    }
+
+    input, textarea {
+        border: none;
+    
+        border-radius: 2px;
+    
+        background: #ffbd93;
+        color: #fff !important;
+    
+        padding: 5px;
+    
+        box-shadow: inset 0 2px 5px #ff8d46;
+    
+        letter-spacing: 1.2px;
+    
+        font-size: 16px;
+    }
+
+    body::before {
+        height: 145vh;
+
+        background-size: 100%;
+        
+        opacity: 0.3;
+    }
+}
