@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eppich Cakes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    
+    <link href="style.css" rel="stylesheet" />
+
+    <script defer src="index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <div id="border">
+        <form onsubmit="return handleSubmit(event)">
+            <div id="brand">
+                <div id="backdrop">
+                    <div id="logo">
+                        <h1>eppich cakes</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="blurb">
+                <p><strong>Contact us for pricing</strong>, varying based on size and decor, and are quoted prior to pick-up. Upon booking a depost of half of the quote amount is required.</p>
+                <p>We recommend <strong>2 to 3 weeks as a minimum</strong> to place an order as there are limited spots each week.</p>
+                <p>Please also allow <strong>up to five days</strong> during the fall season for an email or message back.</p>
+            </div>
+            <div class="checkmark" style="display: none">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 161.2 161.2" enable-background="new 0 0 161.2 161.2" xml:space="preserve">
+              <path class="path" fill="none" stroke="#7DB0D5" stroke-miterlimit="10" d="M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4
+                  c-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5
+                  c0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z"/>
+              <circle class="path" fill="none" stroke="#7DB0D5" stroke-width="4" stroke-miterlimit="10" cx="80.6" cy="80.6" r="62.1"/>
+              <polyline class="path" fill="none" stroke="#7DB0D5" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="113,52.8 
+                  74.1,108.4 48.2,86.4 "/>
+              
+              <circle class="spin" fill="none" stroke="#7DB0D5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12.2175,12.2175" cx="80.6" cy="80.6" r="73.9"/>
+              
+              </svg>
+                
+              <p>Sent!</p>
+            </div>
+              
+            <div class="fields">
+                <input type="text" name="firstname" id="firstname" placeholder="First Name" class="hp"/>
+                <input type="text" name="name" id="name" placeholder="Name *" required/>
+                <input type="email" name="email" id="email" placeholder="Email *" required/>
+                <input type="phone" name="tel" id="phone" placeholder="Phone" />
+                <input type="date" name="date" id="date" required/>
+                <input type="number" name="guest" id="guest" placeholder="Approx. Guests *" required/>
+                <textarea rows="5" name="description" id="description" placeholder="Tell me about your dessert... *" required></textarea>
+                <div id="footer">
+                    <div id="caption">
+                        <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path></svg>
+                    </div>
+                    <div id="submit">
+                        <input type="submit" value="Send" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
