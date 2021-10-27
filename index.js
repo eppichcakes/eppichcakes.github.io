@@ -14,18 +14,19 @@ function sendEmail(data) {
         return;
     }
 
-    const _date = new Date(date);
-    let dateString;
-    if (Object.prototype.toString.call(_date) === "[object Date]") {
-        dateString = new Date(_date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-    } else {
-        dateString = date;
-    }
+    // const _date = new Date(date);
+    // let dateString;
+    // if (Object.prototype.toString.call(_date) === "[object Date]") {
+    //     dateString = new Date(_date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    // } else {
+    //     dateString = date;
+    // }
 
     Email.send({
       Host: "smtp.gmail.com",
       Username: "eppichcakes.mailer@gmail.com",
       Password: "sxkbstgfyzcwlxvi",
+    //   To: 'mitcheleppich@gmail.com',
       To: 'orders@eppichcakes.com',
       From: "eppichcakes.mailer@gmail.com",
       FromName: "eppichcakes.com",
@@ -42,7 +43,7 @@ function sendEmail(data) {
                 <tr><td>Email: ${email}</td></tr>
                 <tr><td>Phone: ${phone}</td></tr>
                 <tr></tr>
-                <tr><td>Requested Date: ${dateString}</td></tr>
+                <tr><td>Requested Date: ${date}</td></tr>
                 <tr><td>Approx. Guest: ${guest}</td></tr>
                 <tr></tr>
                 <tr><td>Description:</td></tr>
