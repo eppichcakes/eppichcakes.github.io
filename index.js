@@ -14,7 +14,13 @@ function sendEmail(data) {
         return;
     }
 
-    const dateString = new Date(date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    const _date = new Date(date);
+    let dateString;
+    if (Object.prototype.toString.call(_date) === "[object Date]") {
+        dateString = new Date(_date).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    } else {
+        dateString = date;
+    }
 
     Email.send({
       Host: "smtp.gmail.com",
