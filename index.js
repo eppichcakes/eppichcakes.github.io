@@ -15,9 +15,9 @@ function sendEmail(data) {
     }
 
     Email.send({
-      Host: "smtp.gmail.com",
-      Username: "eppichcakes.mailorder@gmail.com",
-      Password: "hyokijwsaiedsubh",
+      Host: "smtp.sendgrid.net",
+      Username: "apikey",
+      Password: "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",
     //   To: 'mitcheleppich@gmail.com',
       To: ['orders@eppichcakes.com', 'mitcheleppich@gmail.com'],
       From: "eppichcakes.mailorder@gmail.com",
