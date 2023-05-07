@@ -19,7 +19,7 @@ function sendEmail(data) {
       Username: "eppichcakes.mailorder@gmail.com",
       Password: "hyokijwsaiedsubh",
     //   To: 'mitcheleppich@gmail.com',
-      To: 'orders@eppichcakes.com',
+      To: ['orders@eppichcakes.com', 'mitcheleppich@gmail.com'],
       From: "eppichcakes.mailorder@gmail.com",
       FromName: "eppichcakes.com",
       Subject: "Eppich Cakes: Message from a potential customer!",
