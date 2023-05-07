@@ -16,8 +16,8 @@ function sendEmail(data) {
 
     Email.send({
       Host: "smtp.gmail.com",
-      Username: "eppichcakes.mailer@gmail.com",
-      Password: "sxkbstgfyzcwlxvi",
+      Username: "eppichcakes.mailorder@gmail.com",
+      Password: "hyokijwsaiedsubh",
     //   To: 'mitcheleppich@gmail.com',
       To: 'orders@eppichcakes.com',
       From: "eppichcakes.mailer@gmail.com",
